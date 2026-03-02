@@ -1,14 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../Documents/moro3.4"
-		},
-		{
-			"path": "../Desktop/moro"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }
