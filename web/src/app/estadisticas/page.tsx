@@ -6,7 +6,10 @@ const STRIKERS: { name: string, value: number }[] = [
 const ASSISTS: { name: string, value: number }[] = [
     { name: "Agustin Arcidiacono", value: 1 }
 ];
-const YELLOW_CARDS: { name: string, value: number }[] = [];
+const YELLOW_CARDS: { name: string, value: number }[] = [
+    { name: "Tadeo Charras", value: 1 },
+    { name: "Matias Madariaga", value: 1 }
+];
 const RED_CARDS: { name: string, value: number }[] = [];
 const MATCHES_PLAYED: { name: string, value: number }[] = [];
 
