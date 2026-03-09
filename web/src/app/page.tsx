@@ -61,14 +61,19 @@ export default async function Home() {
       opponent_name: "Hacha y Magia",
       date: "2026-02-28T15:00:00",
       result: "1 - 1"
+    },
+    {
+      opponent_name: "Funebrero",
+      date: "2026-03-07T15:00:00",
+      result: "1 - 2"
     }
   ]
 
   // 4. Static Next Match
   // Actualizar el rival y horario cada semana en esta variable
   const nextMatch = {
-    opponent_name: "Funebrero",
-    date: "2026-03-07T15:00:00",
+    opponent_name: "A confirmar",
+    date: "2026-03-14T15:00:00",
     location: "Cancha 3",
     tournament: "Torneo El Campito",
     result: null

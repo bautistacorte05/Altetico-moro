@@ -1,7 +1,11 @@
 import { Trophy, Goal, Award, Flag, UserCheck } from 'lucide-react'
 
-const STRIKERS: { name: string, value: number }[] = [];
-const ASSISTS: { name: string, value: number }[] = [];
+const STRIKERS: { name: string, value: number }[] = [
+    { name: "Alvaro Charras", value: 1 }
+];
+const ASSISTS: { name: string, value: number }[] = [
+    { name: "Agustin Arcidiacono", value: 1 }
+];
 const YELLOW_CARDS: { name: string, value: number }[] = [];
 const RED_CARDS: { name: string, value: number }[] = [];
 const MATCHES_PLAYED: { name: string, value: number }[] = [];
