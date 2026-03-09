@@ -200,7 +200,7 @@ export default async function Home() {
             </Link>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {players.filter(p => ["Elias Corte", "Tadeo Charras", "Alvaro Charras"].includes(p.name)).map((player) => (
+            {players.filter(p => ["Alvaro Charras", "Agustin Arcidiacono", "Matias Madariaga"].includes(p.name)).map((player) => (
               <PlayerCard key={player.id} player={player} />
             ))}
           </div>
