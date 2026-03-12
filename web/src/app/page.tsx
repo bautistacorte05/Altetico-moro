@@ -72,7 +72,7 @@ export default async function Home() {
   // 4. Static Next Match
   // Actualizar el rival y horario cada semana en esta variable
   const nextMatch = {
-    opponent_name: "A confirmar",
+    opponent_name: "Bradford City",
     date: "2026-03-14T15:00:00",
     location: "Cancha 3",
     tournament: "Torneo El Campito",
