@@ -66,14 +66,19 @@ export default async function Home() {
       opponent_name: "Funebrero",
       date: "2026-03-07T15:00:00",
       result: "1 - 2"
+    },
+    {
+      opponent_name: "Bradford City",
+      date: "2026-03-14T15:00:00",
+      result: "1 - 1"
     }
   ]
 
   // 4. Static Next Match
   // Actualizar el rival y horario cada semana en esta variable
   const nextMatch = {
-    opponent_name: "Bradford City",
-    date: "2026-03-14T15:00:00",
+    opponent_name: "Rival a confirmar",
+    date: "2026-03-21T15:00:00",
     location: "Cancha 3",
     tournament: "Torneo El Campito",
     result: null
@@ -200,7 +205,7 @@ export default async function Home() {
             </Link>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {players.filter(p => ["Alvaro Charras", "Agustin Arcidiacono", "Matias Madariaga"].includes(p.name)).map((player) => (
+            {players.filter(p => ["Tadeo Charras", "Santiago Nicolino"].includes(p.name)).map((player) => (
               <PlayerCard key={player.id} player={player} />
             ))}
           </div>
