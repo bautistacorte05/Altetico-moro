@@ -71,6 +71,11 @@ export default async function Home() {
       opponent_name: "Bradford City",
       date: "2026-03-14T15:00:00",
       result: "1 - 1"
+    },
+    {
+      opponent_name: "En una Baldosa",
+      date: "2026-03-21T15:00:00",
+      result: "2 - 1"
     }
   ]
 
