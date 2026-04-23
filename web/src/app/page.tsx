@@ -110,14 +110,17 @@ export default async function Home() {
 
         {/* Team Photo Section */}
         <section className="rounded-3xl overflow-hidden shadow-xl mb-10">
-          <Image
-            src="/images/equipo.jpg"
-            alt="Foto del equipo Atlético Moro"
-            width={1920}
-            height={1080}
-            className="w-full object-cover"
-            priority
-          />
+          <div className="w-full" style={{ maxHeight: '480px', overflow: 'hidden' }}>
+            <Image
+              src="/images/equipo.jpg"
+              alt="Foto del equipo Atlético Moro"
+              width={1920}
+              height={1080}
+              className="w-full object-cover object-center"
+              style={{ maxHeight: '480px' }}
+              priority
+            />
+          </div>
         </section>
 
         {/* Matches Grid */}
