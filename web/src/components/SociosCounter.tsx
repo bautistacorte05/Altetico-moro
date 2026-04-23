@@ -66,9 +66,9 @@ export function SociosCounter() {
                 onClick={handleBecomeMember}
                 disabled={isMember || loading}
                 className={`text-xs px-4 py-2 rounded-full font-bold transition-all ${isMember
-                    ? 'bg-green-500 text-white cursor-default'
+                    ? 'bg-green-500 text-white'
                     : loading
-                        ? 'bg-gray-300 text-gray-500 cursor-wait'
+                        ? 'bg-gray-300 text-gray-500'
                         : 'bg-white text-moro-blue hover:bg-gray-100'
                     }`}
             >
