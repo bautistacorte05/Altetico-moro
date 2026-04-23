@@ -4,7 +4,8 @@ const STRIKERS: { name: string, value: number }[] = [
     { name: "Alvaro Charras", value: 1 },
     { name: "Ulises", value: 1 },
     { name: "Claudio Di Bin", value: 1 },
-    { name: "Moto", value: 1 }
+    { name: "Moto", value: 1 },
+    { name: "Mirko Barchetta", value: 1 }
 ];
 const ASSISTS: { name: string, value: number }[] = [
     { name: "Agustin Arcidiacono", value: 1 },

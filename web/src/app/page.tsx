@@ -76,15 +76,20 @@ export default async function Home() {
       opponent_name: "En una Baldosa",
       date: "2026-03-21T15:00:00",
       result: "2 - 1"
+    },
+    {
+      opponent_name: "La 29",
+      date: "2026-04-19T15:00:00",
+      result: "1 - 0"
     }
   ]
 
   // 4. Static Next Match
   // Actualizar el rival y horario cada semana en esta variable
   const nextMatch = {
-    opponent_name: "Rival a confirmar",
-    date: "2026-03-21T15:00:00",
-    location: "Cancha 3",
+    opponent_name: "PSG",
+    date: "2026-04-25T12:20:00",
+    location: "Cancha 6",
     tournament: "Torneo El Campito",
     result: null
   }
