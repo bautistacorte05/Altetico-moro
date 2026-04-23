@@ -116,8 +116,8 @@ export default async function Home() {
               alt="Foto del equipo Atlético Moro"
               width={1920}
               height={1080}
-              className="w-full object-cover object-center"
-              style={{ maxHeight: '480px' }}
+              className="w-full object-cover"
+              style={{ maxHeight: '480px', objectPosition: 'center 15%' }}
               priority
             />
           </div>
