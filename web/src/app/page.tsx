@@ -117,7 +117,7 @@ export default async function Home() {
               width={1920}
               height={1080}
               className="w-full h-auto"
-              style={{ marginTop: '-6%' }}
+              style={{ marginTop: '-9%' }}
               priority
             />
           </div>
