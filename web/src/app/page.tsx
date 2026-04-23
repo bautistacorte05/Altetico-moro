@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import fs from 'fs'
 import path from 'path'
-import { Carousel } from '@/components/Carousel'
 import { MatchCard } from '@/components/MatchCard'
 import { PlayerCard } from '@/components/PlayerCard'
 
@@ -11,21 +10,7 @@ import { SociosCounter } from '@/components/SociosCounter'
 import { Calendar as CalendarIcon, ArrowRight } from 'lucide-react'
 
 export default async function Home() {
-  // 1. Read Carousel Images
-  const carouselDir = path.join(process.cwd(), 'public', 'images', 'carousel')
-  let carouselImages: string[] = []
-
-  try {
-    if (fs.existsSync(carouselDir)) {
-      carouselImages = fs.readdirSync(carouselDir)
-        .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file))
-        .map(file => `/images/carousel/${file}`)
-    }
-  } catch (e) {
-    console.error("Error reading carousel images:", e)
-  }
-
-  // 2. Read Team Images to generate Players list
+  // 1. Read Team Images to generate Players list
   const teamDir = path.join(process.cwd(), 'public', 'images', 'team')
   let players: any[] = []
 
@@ -123,12 +108,17 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* Carousel Section */}
-        {carouselImages.length > 0 && (
-          <section className="rounded-3xl overflow-hidden shadow-xl mb-10">
-            <Carousel images={carouselImages} />
-          </section>
-        )}
+        {/* Team Photo Section */}
+        <section className="rounded-3xl overflow-hidden shadow-xl mb-10">
+          <Image
+            src="/images/equipo.jpg"
+            alt="Foto del equipo Atlético Moro"
+            width={1920}
+            height={1080}
+            className="w-full object-cover"
+            priority
+          />
+        </section>
 
         {/* Matches Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
