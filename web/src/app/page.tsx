@@ -6,7 +6,6 @@ import { MatchCard } from '@/components/MatchCard'
 import { PlayerCard } from '@/components/PlayerCard'
 
 
-import { SociosCounter } from '@/components/SociosCounter'
 import { Calendar as CalendarIcon, ArrowRight } from 'lucide-react'
 
 export default async function Home() {
@@ -88,23 +87,18 @@ export default async function Home() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-moro-blue/30 rounded-full blur-3xl -ml-16 -mb-16" />
 
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="max-w-2xl">
-              <span className="text-white/80 font-bold tracking-wider uppercase text-sm mb-2 block">Torneo El Campito</span>
-              <h1 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">
-                Atlético Moro
-              </h1>
-              <p className="text-lg text-gray-100 leading-relaxed mb-6">
-                Club fundado por miembros del colegio Santo Tomas Moro, dedicado a competir futbolísticamente con pasión y compromiso.
-              </p>
-              <div className="flex items-center gap-2 text-sm text-gray-200 font-medium">
-                <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                Temporada en curso
-              </div>
+          <div className="relative z-10">
+            <span className="text-white/80 font-bold tracking-wider uppercase text-sm mb-2 block">Torneo El Campito</span>
+            <h1 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">
+              Atlético Moro
+            </h1>
+            <p className="text-lg text-gray-100 leading-relaxed mb-6">
+              Club fundado por miembros del colegio Santo Tomas Moro, dedicado a competir futbolísticamente con pasión y compromiso.
+            </p>
+            <div className="flex items-center gap-2 text-sm text-gray-200 font-medium">
+              <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+              Temporada en curso
             </div>
-
-            {/* Socios Counter Component */}
-            <SociosCounter />
           </div>
         </section>
 
