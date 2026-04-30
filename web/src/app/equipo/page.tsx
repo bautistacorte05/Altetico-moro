@@ -34,7 +34,7 @@ export default function TeamPage() {
                     position: "Jugador",
                     photo_url: `/images/team/${file}`
                 }
-            }).sort((a, b) => b.jersey_number - a.jersey_number)
+            }).sort((a, b) => a.jersey_number - b.jersey_number)
         }
     } catch (e) {
         console.error("Error reading team images:", e)
