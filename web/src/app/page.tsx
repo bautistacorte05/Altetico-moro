@@ -236,20 +236,6 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* Players Preview */}
-        <div className="space-y-6">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-gray-900">Jugadores Destacados</h2>
-            <Link href="/equipo" className="text-moro-blue font-medium hover:underline flex items-center gap-1">
-              Ver plantel completo <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {players.filter(p => ["Tadeo Charras", "Santiago Nicolino"].includes(p.name)).map((player) => (
-              <PlayerCard key={player.id} player={player} />
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   )
