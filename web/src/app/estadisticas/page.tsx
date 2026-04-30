@@ -8,11 +8,9 @@ const MATCHES_PLAYED: { name: string, value: number }[] = [];
 
 // PAST TOURNAMENT DATA
 const PAST_TOURNAMENT_STRIKERS = [
-    { name: "Claudio Di Bin", value: 5 },
     { name: "Moto", value: 2 }
 ];
 const PAST_TOURNAMENT_ASSISTS = [
-    { name: "Bautista Corte", value: 5 },
     { name: "Bautista Corte", value: 2 }
 ];
 
