@@ -33,9 +33,8 @@ export default async function Home() {
     console.error("Error reading team images:", e)
   }
 
-  // 3. Match History
-  // Agregar aquí los resultados de cada sábado
-  const matchHistory = [
+  // 3. Match History - Torneo anterior
+  const matchHistoryOld = [
     {
       opponent_name: "PSV Juvenil",
       date: "2026-02-21T12:20:00",
@@ -65,16 +64,25 @@ export default async function Home() {
       opponent_name: "La 29",
       date: "2026-04-19T15:00:00",
       result: "1 - 0"
+    },
+    {
+      opponent_name: "PSG",
+      date: "2026-04-25T12:20:00",
+      result: "2 - 1"
     }
   ]
+
+  // 3b. Match History - Torneo nuevo
+  // Agregar aquí los resultados de cada fecha del nuevo torneo
+  const matchHistoryNew: { opponent_name: string; date: string; result: string }[] = []
 
   // 4. Static Next Match
   // Actualizar el rival y horario cada semana en esta variable
   const nextMatch = {
-    opponent_name: "PSG",
-    date: "2026-04-25T12:20:00",
+    opponent_name: "La Ramba",
+    date: "2026-05-02T13:30:00",
     location: "Cancha 6",
-    tournament: "Torneo El Campito",
+    tournament: "Torneo El Campito - Fecha 1",
     result: null
   }
 
@@ -165,13 +173,13 @@ export default async function Home() {
               </div>
             </div>
 
-            {/* Match History */}
+            {/* Match History - Torneo nuevo */}
             <div className="space-y-4 flex-1">
               <h2 className="text-2xl font-bold text-gray-900">Historial</h2>
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 h-full">
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                 <ul className="space-y-4">
-                  {matchHistory.length > 0 ? (
-                    matchHistory.map((match, index) => (
+                  {matchHistoryNew.length > 0 ? (
+                    matchHistoryNew.map((match, index) => (
                       <li key={index} className="flex items-center justify-between pb-4 border-b border-gray-50 last:border-0 last:pb-0">
                         <div>
                           <div className="font-bold text-gray-900">Atlético Moro vs {match.opponent_name}</div>
@@ -187,6 +195,28 @@ export default async function Home() {
                   ) : (
                     <li className="text-gray-500 text-sm text-center">No hay partidos en el historial aún.</li>
                   )}
+                </ul>
+              </div>
+            </div>
+
+            {/* Match History - Torneo anterior */}
+            <div className="space-y-4">
+              <h2 className="text-2xl font-bold text-gray-900">Historial torneo anterior</h2>
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <ul className="space-y-4">
+                  {matchHistoryOld.map((match, index) => (
+                    <li key={index} className="flex items-center justify-between pb-4 border-b border-gray-50 last:border-0 last:pb-0">
+                      <div>
+                        <div className="font-bold text-gray-900">Atlético Moro vs {match.opponent_name}</div>
+                        <div className="text-sm text-gray-500 capitalize">
+                          {new Date(match.date).toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'short' })}
+                        </div>
+                      </div>
+                      <div className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full font-bold text-sm">
+                        {match.result}
+                      </div>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
