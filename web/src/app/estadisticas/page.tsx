@@ -1,32 +1,19 @@
 import { Trophy, Goal, Award, Flag, UserCheck } from 'lucide-react'
 
-const STRIKERS: { name: string, value: number }[] = [
-    { name: "Alvaro Charras", value: 1 },
-    { name: "Ulises", value: 1 },
-    { name: "Claudio Di Bin", value: 1 },
-    { name: "Moto", value: 2 },
-    { name: "Mirko Barchetta", value: 2 }
-];
-const ASSISTS: { name: string, value: number }[] = [
-    { name: "Agustin Arcidiacono", value: 1 },
-    { name: "Mirko Barchetta", value: 1 },
-    { name: "Bautista Corte", value: 2 }
-];
-const YELLOW_CARDS: { name: string, value: number }[] = [
-    { name: "Tadeo Charras", value: 2 },
-    { name: "Matias Madariaga", value: 1 },
-    { name: "Bautista Giogia", value: 1 },
-    { name: "Manuel", value: 1 }
-];
+const STRIKERS: { name: string, value: number }[] = [];
+const ASSISTS: { name: string, value: number }[] = [];
+const YELLOW_CARDS: { name: string, value: number }[] = [];
 const RED_CARDS: { name: string, value: number }[] = [];
 const MATCHES_PLAYED: { name: string, value: number }[] = [];
 
 // PAST TOURNAMENT DATA
 const PAST_TOURNAMENT_STRIKERS = [
-    { name: "Claudio Di Bin", value: 5 }
+    { name: "Claudio Di Bin", value: 5 },
+    { name: "Moto", value: 2 }
 ];
 const PAST_TOURNAMENT_ASSISTS = [
-    { name: "Bautista Corte", value: 5 }
+    { name: "Bautista Corte", value: 5 },
+    { name: "Bautista Corte", value: 2 }
 ];
 
 export const metadata = {
