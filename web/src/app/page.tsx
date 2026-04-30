@@ -18,13 +18,26 @@ export default async function Home() {
       const teamFiles = fs.readdirSync(teamDir)
         .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file))
 
+      const jerseyNumbers: Record<string, number> = {
+        "Agustin Arcidiacono": 10,
+        "Alvaro Charras": 11,
+        "Bautista Corte": 5,
+        "Claudio Di Bin": 9,
+        "Elias Corte": 21,
+        "Santiago Diaz": 22,
+        "Santiago Nicolino": 77,
+        "Matias Madariaga": 2,
+        "Tadeo Charras": 6,
+        "Ezequiel Madariaga": 4,
+      }
+
       players = teamFiles.map((file, index) => {
         const name = path.parse(file).name.replace(/_/g, ' ')
         return {
           id: index,
           name: name,
-          jersey_number: index + 1, // Mock number
-          position: "Jugador", // Generic position
+          jersey_number: jerseyNumbers[name] ?? index + 1,
+          position: "Jugador",
           photo_url: `/images/team/${file}`
         }
       })
