@@ -87,15 +87,21 @@ export default async function Home() {
 
   // 3b. Match History - Torneo nuevo
   // Agregar aquí los resultados de cada fecha del nuevo torneo
-  const matchHistoryNew: { opponent_name: string; date: string; result: string }[] = []
+  const matchHistoryNew: { opponent_name: string; date: string; result: string }[] = [
+    {
+      opponent_name: "La Rambla",
+      date: "2026-05-02T13:30:00",
+      result: "7 - 0"
+    }
+  ]
 
   // 4. Static Next Match
   // Actualizar el rival y horario cada semana en esta variable
   const nextMatch = {
-    opponent_name: "La Ramba",
+    opponent_name: "Brandford",
     date: "2026-05-02T13:30:00",
     location: "Cancha 6",
-    tournament: "Torneo El Campito - Fecha 1",
+    tournament: "Torneo El Campito - Fecha 2",
     result: null
   }
 
@@ -163,9 +169,11 @@ export default async function Home() {
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                 <ul className="space-y-4">
                   {[
-                    { time: "12:20hs" },
-                    { time: "13:10hs" },
-                    { time: "15:00hs" }
+                    { fecha: "Fecha 3", opponent: "Las Torres" },
+                    { fecha: "Fecha 4", opponent: "Pachorra" },
+                    { fecha: "Fecha 5", opponent: "La 29 FC" },
+                    { fecha: "Fecha 6", opponent: "PSG" },
+                    { fecha: "Fecha 7", opponent: "J.H" },
                   ].map((match, index) => (
                     <li key={index} className="flex items-start gap-4 pb-4 border-b border-gray-50 last:border-0 last:pb-0">
                       <div className="bg-moro-red/10 text-moro-red p-2 rounded-lg font-bold min-w-[60px] text-center">
@@ -173,11 +181,10 @@ export default async function Home() {
                       </div>
                       <div>
                         <div className="font-bold text-gray-900">
-                          {match.time}
+                          {match.fecha}
                         </div>
-                        <div className="text-sm text-gray-500 mt-1 flex items-center gap-1">
-                          <MapPinIcon className="w-3 h-3" />
-                          Cancha 2
+                        <div className="text-sm text-gray-500 mt-1">
+                          vs {match.opponent}
                         </div>
                       </div>
                     </li>
