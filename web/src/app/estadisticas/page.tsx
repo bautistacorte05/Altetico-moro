@@ -15,7 +15,9 @@ const ASSISTS: { name: string, value: number }[] = [
     { name: "Santiago Nicolino", value: 1 },
     { name: "Bautista Giorgia", value: 1 },
 ];
-const YELLOW_CARDS: { name: string, value: number }[] = [];
+const YELLOW_CARDS: { name: string, value: number }[] = [
+    { name: "Santiago Nicolino", value: 1 },
+];
 const RED_CARDS: { name: string, value: number }[] = [];
 const MATCHES_PLAYED: { name: string, value: number }[] = [
     { name: "Ulises", value: 1 },
