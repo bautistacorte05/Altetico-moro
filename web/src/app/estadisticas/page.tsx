@@ -17,7 +17,22 @@ const ASSISTS: { name: string, value: number }[] = [
 ];
 const YELLOW_CARDS: { name: string, value: number }[] = [];
 const RED_CARDS: { name: string, value: number }[] = [];
-const MATCHES_PLAYED: { name: string, value: number }[] = [];
+const MATCHES_PLAYED: { name: string, value: number }[] = [
+    { name: "Ulises", value: 1 },
+    { name: "Ezequiel Madariaga", value: 1 },
+    { name: "Ruso", value: 1 },
+    { name: "Tadeo Charras", value: 1 },
+    { name: "Bautista Giorgia", value: 1 },
+    { name: "Elias Corte", value: 1 },
+    { name: "Matias Madariaga", value: 1 },
+    { name: "Alvaro Charras", value: 1 },
+    { name: "Claudio Di Bin", value: 1 },
+    { name: "Moto", value: 1 },
+    { name: "Mirko Barchetta", value: 1 },
+    { name: "Bautista Corte", value: 1 },
+    { name: "Santiago Nicolino", value: 1 },
+    { name: "Tino", value: 1 },
+];
 
 // PAST TOURNAMENT DATA
 const PAST_TOURNAMENT_STRIKERS = [
